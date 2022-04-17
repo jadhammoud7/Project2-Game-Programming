@@ -13,8 +13,8 @@ public class light_script : MonoBehaviour
         mylight.intensity = 1;
         light_intensity = mylight.intensity;
         light_current = mylight.intensity;
-        Debug.Log(mylight.intensity);
-        Debug.Log("light intensity is: " + mylight.intensity);
+        // Debug.Log(mylight.intensity);
+        // Debug.Log("light intensity is: " + mylight.intensity);
 
     }
 
