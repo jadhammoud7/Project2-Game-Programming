@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\third person shooter\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
      <Compile Include="Assets\third person shooter\InputSystem\StarterAssetsInputs.cs" />
+     <Compile Include="Assets\Scripts\coroutine_script.cs" />
      <Compile Include="Assets\third person shooter\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
      <Compile Include="Assets\third person shooter\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
      <Compile Include="Assets\third person shooter\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
@@ -45,6 +46,7 @@
      <Compile Include="Assets\third person shooter\ThirdPersonController\Scripts\BasicRigidBodyPush.cs" />
      <Compile Include="Assets\third person shooter\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\third person shooter\ThirdPersonController\Scripts\ThirdPersonController.cs" />
+     <Compile Include="Assets\Scripts\light_script\light_script.cs" />
      <None Include="Assets\third person shooter\Environment\Shaders\Built-in_RP\Triplanar.shader" />
      <None Include="Assets\third person shooter\license.txt" />
      <None Include="Assets\third person shooter\Environment\Shaders\Built-in_RP\ArmatureShader.shader" />
