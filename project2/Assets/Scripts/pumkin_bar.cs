@@ -18,7 +18,7 @@ public class pumkin_bar : MonoBehaviour
     public void setAmountNumber(int pumkin_value)//set the slider to the current value of the pumkin found
     {
         slider.value = pumkin_value;
-        Debug.Log(slider.value);
+        Debug.Log("slider is added by 1: "+slider.value);
     }
     void Start()
     {

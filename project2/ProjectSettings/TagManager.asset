@@ -6,6 +6,8 @@ TagManager:
   tags:
   - CinemachineTarget
   - House
+  - Pumkin
+  - Pumpkin
   layers:
   - Default
   - TransparentFX
