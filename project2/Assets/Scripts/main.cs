@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class main : MonoBehaviour
 {
-
+    public score getscore;
     public pumkin_bar bar;
     int count = 0;
     // Start is called before the first frame update
@@ -22,7 +22,7 @@ public class main : MonoBehaviour
         if (other.gameObject.tag == "Pumpkin")
         {
             Debug.Log("i got a pumpkin");
-            count = bar.getNumber_of_pumkins() + 1;
+            count = getscore.getScore(); 
             Debug.Log("incremented by 1");
             bar.setAmountNumber(count);
         }

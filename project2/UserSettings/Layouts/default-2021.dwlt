@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 79
+  controlID: 101
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 80
+  controlID: 17
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 81
+  controlID: 18
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -346,22 +346,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/SO
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/SO
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Lenovo\Desktop\project2-game\Project2-Game-Programming\project2
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: a0dc0000
-    m_LastClickedID: 56480
-    m_ExpandedIDs: 000000009adc0000a2dc000034140100e636010000ca9a3bffffff7f
+    m_SelectedIDs: 941a0100
+    m_LastClickedID: 72340
+    m_ExpandedIDs: 00000000aedc000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -517,9 +517,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 8e860100
-      m_LastClickedID: 99982
-      m_ExpandedIDs: dc29ffff184fffffda59ffff8467ffff486fffff2278ffffd28effff1890ffff14e100001ee30000b6310100067e010098880100
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: f68effff0a90ffff04e4000040e50000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -535,7 +535,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 5}
+        m_ClientGUIView: {fileID: 4}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -768,9 +768,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -11.190137, y: -5.2121277, z: 5.330328}
+    m_Target: {x: -6.433717, y: -7.66222, z: 3.5667553}
     speed: 2
-    m_Value: {x: -11.190137, y: -5.2121277, z: 5.330328}
+    m_Value: {x: -6.433717, y: -7.66222, z: 3.5667553}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -817,13 +817,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.088570766, y: -0.91120493, z: 0.27351713, w: 0.2950982}
+    m_Target: {x: -0.04104013, y: -0.9133409, z: 0.39383188, w: -0.09514856}
     speed: 2
-    m_Value: {x: 0.08856927, y: -0.9111895, z: 0.2735125, w: 0.29509318}
+    m_Value: {x: -0.04103946, y: -0.913326, z: 0.39382544, w: -0.095147006}
   m_Size:
-    m_Target: 7.261444
+    m_Target: 8.516012
     speed: 2
-    m_Value: 7.261444
+    m_Value: 8.516012
   m_Ortho:
     m_Target: 0
     speed: 2

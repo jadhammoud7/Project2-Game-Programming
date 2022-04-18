@@ -50,6 +50,10 @@
      <Compile Include="Assets\third person shooter\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\third person shooter\ThirdPersonController\Scripts\ThirdPersonController.cs" />
      <Compile Include="Assets\Scripts\light_script\light_script.cs" />
+     <Compile Include="Assets\SO\pumpkin_rotation.cs" />
+     <Compile Include="Assets\SO\Pumpkin.cs" />
+     <Compile Include="Assets\SO\pumpkinSO.cs" />
+     <Compile Include="Assets\SO\score.cs" />
      <None Include="Assets\third person shooter\Environment\Shaders\Built-in_RP\Triplanar.shader" />
      <None Include="Assets\third person shooter\license.txt" />
      <None Include="Assets\third person shooter\Environment\Shaders\Built-in_RP\ArmatureShader.shader" />
