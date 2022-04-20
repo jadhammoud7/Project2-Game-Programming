@@ -8,6 +8,7 @@ TagManager:
   - House
   - Pumkin
   - Pumpkin
+  - Slender
   layers:
   - Default
   - TransparentFX
