@@ -27,4 +27,10 @@ public class pumkin_bar : MonoBehaviour
     public int getNumber_of_pumkins(){
         return (int)slider.value;
     }
+    public bool hasWOn(){
+        if(slider.value==slider.maxValue){
+            return true;
+        }
+        return false;
+    }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class pausemenu : MonoBehaviour
 {
@@ -25,12 +26,18 @@ public class pausemenu : MonoBehaviour
                 Pause();
             }
         } 
+        if(GamePaused){
+        if(Input.GetKeyDown(KeyCode.Q)){
+            SceneManager.LoadScene(0);
+        }
+        }
     }
     public void Resume(){
         pausemenuUI.SetActive(false);
         Debug.Log("i am playing now");
         Time.timeScale=1f;
         GamePaused=false;
+
     }
     void Pause(){
         pausemenuUI.SetActive(true);
@@ -38,5 +45,6 @@ public class pausemenu : MonoBehaviour
         Time.timeScale=0f;
         GamePaused=true;
     }
+
 
 }   

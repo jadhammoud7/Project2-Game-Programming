@@ -7,9 +7,11 @@ public class Pumpkin : MonoBehaviour
 {
     [SerializeField] pumpkinSO thisPumpkin;
     [SerializeField] score currentScore;
+    [SerializeField] ParticleSystem smoke;
     // Start is called before the first frame update
     void Start()
     {
+        smoke.Stop();
         currentScore.Overllscore=0;
     }
 
@@ -23,6 +25,9 @@ public void OnTriggerEnter(Collider other) {
         currentScore.Overllscore+=thisPumpkin.pumpkinWeight;
         Debug.Log("Score is now: "+currentScore.Overllscore);
         Destroy(gameObject);
+        smoke.Play();
+        Debug.Log("pmumkin vanished");
+
     }
 }
 }
