@@ -27,10 +27,5 @@ public class health_bar : MonoBehaviour
     public int getNumber_of_health(){
         return (int)slider.value;
     }
-    // public bool hasWOn(){
-    //     if(slider.value==slider.maxValue){
-    //         return true;
-    //     }
-    //     return false;
-    // }
+
 }

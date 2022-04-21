@@ -26,13 +26,11 @@ public class main : MonoBehaviour
         {
             Debug.Log("i got a pumpkin");
             count = getscore.getScore();
-            Debug.Log("incremented by 1");
             bar.setAmountNumber(count);
         }
         if (other.gameObject.tag == "Slender")
         {
             health=health_Bar.getNumber_of_health()-10;
-            // Debug.Log("Health is now: "+health);
             health_Bar.setAmountNumber(health);
         }
     }

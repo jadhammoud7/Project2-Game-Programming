@@ -1,0 +1,8 @@
+tree("Root")
+	sequence
+		PickRandomDestination
+		TargetPlayer
+		LookAtTarget
+		GoToTarget
+
+		

@@ -8,7 +8,7 @@ using TMPro;
 public class Timer_Scene2 : MonoBehaviour
 {
     [SerializeField] GameObject haswon;
-    
+
     [SerializeField] TextMeshProUGUI score_text_final;
 
     [SerializeField] GameObject haslost;
@@ -49,22 +49,34 @@ public class Timer_Scene2 : MonoBehaviour
             //canvas won
             //press key to move to next page
         }
-        if (getTimer() == 0 && !amount_of_pumpkin.hasWOn() && amount_of_health.getNumber_of_health()>0)
+        if (getTimer() == 0 && !amount_of_pumpkin.hasWOn() && amount_of_health.getNumber_of_health() > 0)
         {
             //canvas lost
             haslost.SetActive(true);
             Time.timeScale = 0f; //pause time of the game
-            score_text_final.text="You collected "+amount_of_pumpkin.getNumber_of_pumkins()+" /12 pumkpins only";
+            score_text_final.text = "You collected " + amount_of_pumpkin.getNumber_of_pumkins() + " /12 pumkpins only";
             if (Input.GetKeyDown(KeyCode.K)) //play again
             {
                 SceneManager.LoadScene(2);// load the same screen
             }
 
         }
-        if(getTimer()>0 && amount_of_health.getNumber_of_health()==0){//when health is 0
+        if (getTimer() > 0 && amount_of_health.getNumber_of_health() == 0)
+        {//when health is 0
             //died
-            Debug.Log(amount_of_health.getNumber_of_health()+" is my health");
+            Debug.Log(amount_of_health.getNumber_of_health() + " is my health");
             hasdied.SetActive(true);
+            Time.timeScale = 0f; //pause time of the game
+            if (Input.GetKeyDown(KeyCode.K)) //play again
+            {
+                SceneManager.LoadScene(2);// load the same screen
+            }
+        }
+
+        if (getTimer() == 0 && amount_of_health.getNumber_of_health() == 0)
+        {//when health is 0
+            //lost
+            haslost.SetActive(true);
             Time.timeScale = 0f; //pause time of the game
             if (Input.GetKeyDown(KeyCode.K)) //play again
             {
