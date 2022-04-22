@@ -5,46 +5,64 @@ using UnityEngine.SceneManagement;
 
 public class pausemenu : MonoBehaviour
 {
-    
-    public  static bool GamePaused=false;
+
+    public static bool GamePaused = false;
     public GameObject pausemenuUI;
 
     // Update is called once per frame
- void Start() {
-    pausemenuUI.SetActive(false);
-}
+    void Start()
+    {
+        pausemenuUI.SetActive(false);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
 
-     public void QuitGamebtn(){
+    public void QuitGamebtn()
+    {
         Debug.Log("quited");
     }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)){
-            if(GamePaused){
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (GamePaused)
+            {
                 Resume();
-            }else{
+            }
+            else
+            {
                 Pause();
             }
-        } 
-        if(GamePaused){
-        if(Input.GetKeyDown(KeyCode.Q)){
-            SceneManager.LoadScene(0);
         }
+        if (GamePaused)
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                SceneManager.LoadScene(0);
+            }
         }
     }
-    public void Resume(){
+    public void Resume()
+    {
         pausemenuUI.SetActive(false);
         Debug.Log("i am playing now");
-        Time.timeScale=1f;
-        GamePaused=false;
+        Time.timeScale = 1f;
+        GamePaused = false;
 
     }
-    void Pause(){
+    void Pause()
+    {
         pausemenuUI.SetActive(true);
         Debug.Log("i paused now");
-        Time.timeScale=0f;
-        GamePaused=true;
+        Time.timeScale = 0f;
+        GamePaused = true;
     }
 
 
-}   
+    public void debug()
+    {
+        Debug.Log("hello");
+    }
+
+
+}
