@@ -7,20 +7,20 @@ public class pausemenu : MonoBehaviour
 {
 
     public static bool GamePaused = false;
+    [Tooltip("This is the pause menu that will be visible when the player presses the esc button, or onclicks the pause logo on the right top of the screen, at that time the game pauses")]
     public GameObject pausemenuUI;
+    [Tooltip("This is the instructions canvas that will be visible at the beginning of the game")]
+    [SerializeField] GameObject InstructionsUI;
 
-    // Update is called once per frame
     void Start()
     {
-        pausemenuUI.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        InstructionsUI.SetActive(true);
+        Time.timeScale = 0f;
+        pausemenuUI.SetActive(false);
     }
 
-    public void QuitGamebtn()
-    {
-        Debug.Log("quited");
-    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -58,11 +58,12 @@ public class pausemenu : MonoBehaviour
         GamePaused = true;
     }
 
-
-    public void debug()
-    {
-        Debug.Log("hello");
+    public void Play(){
+        InstructionsUI.SetActive(false);
+        Time.timeScale = 1f;
     }
-
+    public void Quit(){
+        SceneManager.LoadScene(0);
+    }
 
 }
