@@ -102,4 +102,13 @@ public class Timer_Scene2 : MonoBehaviour
     {
         return image.fillAmount;
     }
+    public void restartGame(){
+        SceneManager.LoadScene(2);// load the same screen
+
+    }
+        public void gotomainmenu(){
+        SceneManager.LoadScene(0);// load the same screen
+
+    }
+
 }

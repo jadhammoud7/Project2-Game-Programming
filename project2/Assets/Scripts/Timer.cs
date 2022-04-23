@@ -79,4 +79,12 @@ public class Timer : MonoBehaviour
     {
         return image.fillAmount;
     }
+    public void PlayAgain(){
+        SceneManager.LoadScene(1);// load the same screen
+
+    }
+    public void NextLevel(){
+        SceneManager.LoadScene(2);
+
+    }
 }

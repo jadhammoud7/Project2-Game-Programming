@@ -9,6 +9,7 @@ public class pausemenu : MonoBehaviour
     public static bool GamePaused = false;
     [Tooltip("This is the pause menu that will be visible when the player presses the esc button, or onclicks the pause logo on the right top of the screen, at that time the game pauses")]
     public GameObject pausemenuUI;
+    public GameObject settings;
     [Tooltip("This is the instructions canvas that will be visible at the beginning of the game")]
     [SerializeField] GameObject InstructionsUI;
 
@@ -64,6 +65,14 @@ public class pausemenu : MonoBehaviour
     }
     public void Quit(){
         SceneManager.LoadScene(0);
+    }
+    public void volumeChanger(){
+        pausemenuUI.SetActive(false);
+        settings.SetActive(true);
+    }
+    public void backToResume(){
+        pausemenuUI.SetActive(true);
+        settings.SetActive(false);
     }
 
 }

@@ -22,13 +22,17 @@ public class pumkin_bar : MonoBehaviour
     }
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
-    public int getNumber_of_pumkins(){
+    public int getNumber_of_pumkins()
+    {
         return (int)slider.value;
     }
-    public bool hasWOn(){
-        if(slider.value==slider.maxValue){
+    public bool hasWOn()
+    {
+        if (slider.value == slider.maxValue)
+        {
             return true;
         }
         return false;
