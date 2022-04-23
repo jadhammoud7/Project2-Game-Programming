@@ -13,6 +13,7 @@ public class pausemenu : MonoBehaviour
     [Tooltip("This is the instructions canvas that will be visible at the beginning of the game")]
     [SerializeField] GameObject InstructionsUI;
 
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.None;
@@ -74,5 +75,6 @@ public class pausemenu : MonoBehaviour
         pausemenuUI.SetActive(true);
         settings.SetActive(false);
     }
+
 
 }
