@@ -102,6 +102,10 @@ public class Timer_Scene2 : MonoBehaviour
     {
         return image.fillAmount;
     }
+        public float setTimer(float time)
+    {
+        return image.fillAmount=time;
+    }
     public void restartGame(){
         SceneManager.LoadScene(2);// load the same screen
 
