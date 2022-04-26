@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;//fir canvas
+using UnityEngine.UI;
+//for canvas
 using UnityEngine.SceneManagement;// to load to another scene
 using TMPro;
 

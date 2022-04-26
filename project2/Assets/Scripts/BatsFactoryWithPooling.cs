@@ -34,7 +34,7 @@ public class BatsFactoryWithPooling : MonoBehaviour
         game_object.transform.SetParent(this.transform);//bats factory becomes parent for game object
         game_object.transform.position = this.transform.position;
         Debug.Log("Added object to be child of BatsParent");
-        game_object.GetComponent<Rigidbody>().velocity = Vector3.up * 10;//velocity of game object upwards
+        game_object.GetComponent<Rigidbody>().velocity = Vector3.up * 5;//velocity of game object upwards
         game_object.transform.rotation = Quaternion.identity;//setting no rotation for game object
         game_object.SetActive(true);//setting visibility true for game object
     }
