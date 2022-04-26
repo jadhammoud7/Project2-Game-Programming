@@ -18,9 +18,9 @@ public class BatsScriptWithPooling : MonoBehaviour
     {
         
     }
-    private void onTriggerEnter(Collision other){
+    private void OnTriggerEnter(Collision other){//when collided with player
         if(other.gameObject.tag == "Player"){
-            StartCoroutine(BFWithPooling.addToPool(this.gameObject));
+            StartCoroutine(BFWithPooling.addToPool(this.gameObject));//start coroutine of addToPool
         }
     }
 }

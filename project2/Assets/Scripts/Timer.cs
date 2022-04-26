@@ -7,11 +7,13 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
+    [Tooltip("The canvas displaying that the player has won")]
     [SerializeField] GameObject haswon;
-    
+    [Tooltip("The text that shows the final score by the player")]
     [SerializeField] TextMeshProUGUI score_text_final;
-
+    [Tooltip("The canvas displaying that the player has lost")]
     [SerializeField] GameObject haslost;
+    [Tooltip("The image which is the timer circle displaying the time passed and remaining for the game to finish")]
     [SerializeField]
     Image image;
     float fill;
@@ -37,10 +39,10 @@ public class Timer : MonoBehaviour
             StopCoroutine(turnON());
         }
 
-        if (getTimer() > 0 && amount_of_pumpkin.hasWOn())
+        if (getTimer() > 0 && amount_of_pumpkin.hasWOn())//if all pumpkins collected and before time runs out
         {
-            haswon.SetActive(true);
-            Time.timeScale = 0f;
+            haswon.SetActive(true);//display won canvas
+            Time.timeScale = 0f;//pause game
             if (Input.GetKeyDown(KeyCode.N))// move to level 2
             {
                 SceneManager.LoadScene(2);
@@ -48,10 +50,10 @@ public class Timer : MonoBehaviour
             //canvas won
             //press key to move to next page
         }
-        if (getTimer() == 0 && !amount_of_pumpkin.hasWOn())
+        if (getTimer() == 0 && !amount_of_pumpkin.hasWOn())//if times run out and not all pumpkins are collected
         {
             //canvas lost
-            haslost.SetActive(true);
+            haslost.SetActive(true);//display lost canvas
             Time.timeScale = 0f; //pause time of the game
             score_text_final.text="You collected "+amount_of_pumpkin.getNumber_of_pumkins()+" /12 pumkpins only";
             if (Input.GetKeyDown(KeyCode.K)) //play again
@@ -66,10 +68,10 @@ public class Timer : MonoBehaviour
 
     IEnumerator turnON()
     {
-        for (float i = fill; fill >= 0; fill -= .1f)
+        for (float i = fill; fill >= 0; fill -= .1f)//every 5 sec decrement timer by 0.1
         {
             image.fillAmount = fill;
-            yield return new WaitForSeconds(5f);//every iteration will take 1 sec
+            yield return new WaitForSeconds(5f);//every iteration will take 5 sec
         }
         image.fillAmount = 0;
         Debug.Log("Amount is now: " + image.fillAmount);

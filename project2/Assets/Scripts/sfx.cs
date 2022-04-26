@@ -15,17 +15,17 @@ public class sfx : MonoBehaviour
     {
         RaycastHit hit;
         if(Physics.Raycast(transform.position, transform.forward, out hit, 10)){
-            if(hit.collider.gameObject.tag == "Slender"){
-                GameObject slender = hit.collider.gameObject;
-                slender.GetComponent<AudioSource>().Play();
+            if(hit.collider.gameObject.tag == "Slender"){//when the raycast from player hits a slender
+                GameObject slender = hit.collider.gameObject;//the slender which is hit
+                slender.GetComponent<AudioSource>().Play();//play the sound of the slender
                 Debug.Log("Slender is making sound");
             }    
         }
         
     }
-    public void OnCollisionEnter(Collision other) {
+    public void OnCollisionEnter(Collision other) {//when player collides with object of tag spooky
         if(other.gameObject.tag=="spooky"){
-            other.gameObject.GetComponent<AudioSource>().Play();
+            other.gameObject.GetComponent<AudioSource>().Play();//play sound of game object
        }
     }
 }

@@ -8,7 +8,7 @@ public class pumkin_bar : MonoBehaviour
     [Tooltip("The slider is the slider of the ammo bar that moves according to the current health of the animal")]
     public Slider slider;
 
-
+    [Tooltip("The image fill of the pumpkin bar")]
     public Image fill;
     public void setMaxNumber(int pumkin)//set the slider to the max value
     {
@@ -25,11 +25,11 @@ public class pumkin_bar : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
-    public int getNumber_of_pumkins()
+    public int getNumber_of_pumkins()//gets slider value of pumpkin bar
     {
         return (int)slider.value;
     }
-    public bool hasWOn()
+    public bool hasWOn()//returns true if slider reaches max, meaning all pumpkins are collected
     {
         if (slider.value == slider.maxValue)
         {

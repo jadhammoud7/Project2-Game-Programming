@@ -8,7 +8,7 @@ public class health_bar : MonoBehaviour
     [Tooltip("The slider is the slider of the ammo bar that moves according to the current health of the animal")]
     public Slider slider;
 
-
+    [Tooltip("The fill which is the image of the health bar")]
     public Image fill;
     public void setMaxNumber(int health)//set the slider to the max value
     {

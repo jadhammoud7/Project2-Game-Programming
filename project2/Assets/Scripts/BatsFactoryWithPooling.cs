@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class BatsFactoryWithPooling : MonoBehaviour
 {
+    [Tooltip("This is the bats parent that will contain initially all the bats as a children in it"])
     [SerializeField] Transform BatsParent;
+    [Tooltip("This is the bat element that will be instantiated")]
     [SerializeField] GameObject batToInstantiate;
+    [Tooltip("This is the pool list where all bats added to the factory will be extracted from it")]
     [SerializeField] List<GameObject> myPool = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log(BatsParent.transform.childCount);
-        foreach(Transform obj in BatsParent){
-            obj.gameObject.SetActive(false);
-            myPool.Add(obj.gameObject);
+        foreach(Transform obj in BatsParent){//for all bats that are children of BatsParent
+            obj.gameObject.SetActive(false);//set visibility none
+            myPool.Add(obj.gameObject);//add bat to the pool
             Debug.Log("Object added to Pool");
         }
     }
