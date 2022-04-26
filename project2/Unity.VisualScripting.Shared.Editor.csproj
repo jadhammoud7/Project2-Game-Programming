@@ -926,6 +926,12 @@
     <Reference Include="netstandard">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.2.14f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\netstandard.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.UI">
+        <HintPath>C:\Users\user\Desktop\Project2\Project2-Game-Programming\project2\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+        <HintPath>C:\Users\user\Desktop\Project2\Project2-Game-Programming\project2\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
@@ -951,6 +957,14 @@
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{429cd159-305b-55e7-3fdd-6831864801c8}</Project>
       <Name>Unity.VisualScripting.State</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.TestRunner.csproj">
+      <Project>{6e34b575-c342-29b5-2fb5-1f91239d439b}</Project>
+      <Name>UnityEngine.TestRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.TestRunner.csproj">
+      <Project>{0ee5e8ac-f53d-ae7c-c8ad-1c7230cc15b3}</Project>
+      <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

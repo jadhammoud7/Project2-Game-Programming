@@ -23,9 +23,12 @@ public class sfx : MonoBehaviour
         }
         
     }
-    public void OnCollisionEnter(Collision other) {//when player collides with object of tag spooky
-        if(other.gameObject.tag=="spooky"){
+
+    private void OnCollisionEnter(Collision other) {//when player collides with object of tag spooky
+         if(other.gameObject.tag=="spooky"){
+            Debug.Log("I collided with a gravestone");
             other.gameObject.GetComponent<AudioSource>().Play();//play sound of game object
        }
     }
+
 }

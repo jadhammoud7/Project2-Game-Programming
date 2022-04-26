@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BatsFactoryWithPooling : MonoBehaviour
 {
-    [Tooltip("This is the bats parent that will contain initially all the bats as a children in it"])
+    [Tooltip("This is the bats parent that will contain initially all the bats as a children in it")]
     [SerializeField] Transform BatsParent;
     [Tooltip("This is the bat element that will be instantiated")]
     [SerializeField] GameObject batToInstantiate;

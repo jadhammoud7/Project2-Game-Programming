@@ -14,13 +14,18 @@ public class pausemenu : MonoBehaviour
     [Tooltip("This is the instructions canvas that will be visible at the beginning of the game")]
     [SerializeField] GameObject InstructionsUI;
 
+    public delegate void ButtonClicked();
+    public static event ButtonClicked Button;  
+    ButtonClicked button; 
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;//make curson visilbe in the canvas
-        InstructionsUI.SetActive(true);//instructions initially is visible
-        Time.timeScale = 0f;//game is paused
-        pausemenuUI.SetActive(false);//pause menu is invisible
+        button += InstructionsMenuVisible;//instructions initially is visible
+        button += GameIsPaused;//game is paused
+        button += PauseMenuInvisible;//pause menu is invisible
+        button();
     }
 
     void Update()
@@ -46,23 +51,25 @@ public class pausemenu : MonoBehaviour
     }
     public void Resume()//resume button
     {
-        pausemenuUI.SetActive(false);//pause menu returns invisible
+        button += PauseMenuInvisible;//pause menu returns invisible
         Debug.Log("i am playing now");
-        Time.timeScale = 1f;//game is resumed
+        button += GameIsResumed;//game is resumed
         GamePaused = false;
-
+        button();
     }
     void Pause()//pause button
     {
-        pausemenuUI.SetActive(true);//pause menu is visible
+        button += PauseMenuVisible;//pause menu is visible
         Debug.Log("i paused now");
-        Time.timeScale = 0f;//game paused
+        button += GameIsPaused;//game paused
         GamePaused = true;
+        button();
     }
 
     public void Play(){//play button in instructions canvas
-        InstructionsUI.SetActive(false);//instructions becomes invisible
-        Time.timeScale = 1f;//game starts
+        button += InstructionsMenuInvisible;//instructions becomes invisible
+        button += GameIsResumed;//game starts
+        button();
     }
 
     public void Quit(){//return to main menu button
@@ -70,13 +77,40 @@ public class pausemenu : MonoBehaviour
     }
 
     public void volumeChanger(){//settings button
-        pausemenuUI.SetActive(false);//pause menu disabled
-        settings.SetActive(true);//enable settings menu
+        button += PauseMenuInvisible;//pause menu disabled
+        button += SettingsMenuVisible;//enable settings menu
+        button();
     }
 
     public void backToResume(){//back button ins settings menu
+        button += PauseMenuInvisible;
+        button += SettingsMenuInvisible;
+        button();
+    }
+
+    public void PauseMenuInvisible(){
+        pausemenuUI.SetActive(false);
+    }
+    public void PauseMenuVisible(){
         pausemenuUI.SetActive(true);
+    }
+    public void InstructionsMenuVisible(){
+        InstructionsUI.SetActive(true);
+    }
+    public void InstructionsMenuInvisible(){
+        InstructionsUI.SetActive(false);
+    }
+    public void SettingsMenuInvisible(){
         settings.SetActive(false);
+    }
+    public void SettingsMenuVisible(){
+        settings.SetActive(true);
+    }
+    public void GameIsPaused(){
+        Time.timeScale = 0f;
+    }
+    public void GameIsResumed(){
+        Time.timeScale = 1f;
     }
 
 

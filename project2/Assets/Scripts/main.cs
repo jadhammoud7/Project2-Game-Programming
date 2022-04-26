@@ -34,6 +34,8 @@ public class main : MonoBehaviour
         {
             health=health_Bar.getNumber_of_health()-10;//decrease health bar by 10
             health_Bar.setAmountNumber(health);
+            other.gameObject.GetComponent<Animator>().SetBool("attack", true);
+            Debug.Log("Slender is attacking you!");
         }
     }
 }

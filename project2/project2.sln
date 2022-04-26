@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.TestRunner", "UnityEngine.TestRunner.csproj", "{6e34b575-c342-29b5-2fb5-1f91239d439b}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.VisualScripting.Flow", "Unity.VisualScripting.Flow.csproj", "{e55b9ce0-4d9a-f63f-84c8-3a85c8ff234e}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.InputSystem", "Unity.InputSystem.csproj", "{654078c5-0a9c-9d5c-152c-ab67cadb2c7c}"
@@ -45,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.CollabProxy.Editor", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Postprocessing.Editor", "Unity.Postprocessing.Editor.csproj", "{db7c55ab-2ef3-6e2d-0636-05e9c252ce46}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEditor.TestRunner", "UnityEditor.TestRunner.csproj", "{0ee5e8ac-f53d-ae7c-c8ad-1c7230cc15b3}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TestTools.CodeCoverage.Editor", "Unity.TestTools.CodeCoverage.Editor.csproj", "{1ff333b4-6eb0-2f77-d6e4-347e1ce4b40c}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PandaBehaviourEditor", "PandaBehaviourEditor.csproj", "{628a2eae-c199-8630-b3b5-7bbf2d8c7608}"
@@ -72,6 +76,8 @@ Global
 		Debug|Any CPU = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6e34b575-c342-29b5-2fb5-1f91239d439b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6e34b575-c342-29b5-2fb5-1f91239d439b}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{e55b9ce0-4d9a-f63f-84c8-3a85c8ff234e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{e55b9ce0-4d9a-f63f-84c8-3a85c8ff234e}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{654078c5-0a9c-9d5c-152c-ab67cadb2c7c}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -116,6 +122,8 @@ Global
 		{ede4a2bb-68f6-30cc-927c-4222c9f29000}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{db7c55ab-2ef3-6e2d-0636-05e9c252ce46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{db7c55ab-2ef3-6e2d-0636-05e9c252ce46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ee5e8ac-f53d-ae7c-c8ad-1c7230cc15b3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ee5e8ac-f53d-ae7c-c8ad-1c7230cc15b3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ff333b4-6eb0-2f77-d6e4-347e1ce4b40c}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1ff333b4-6eb0-2f77-d6e4-347e1ce4b40c}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{628a2eae-c199-8630-b3b5-7bbf2d8c7608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
